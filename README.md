@@ -8,12 +8,12 @@ MultiAgentController()：
 - 包含了多智能体的网络和所需要的操作
 - 用于生成agent模型（value-based算法为q net；AC的为actor net critic net）
 - 包含agent的操作，如产生action、计算individual q值等
-SMAC()：
 
+SMAC()：
 - 星际争霸多智能体强化学习环境
 - 可以编写自己的环境，最好根据SMAC提供的一套api封装一下
-ReplayBuffer()：
 
+ReplayBuffer()：
 - 用于存数据(注意有两种存储方式：1）存transition；2）存episode。根据算法需求选择)
 - 用于sample数据，喂给模型训练
 
