@@ -6,7 +6,7 @@
 
 MultiAgentController()：
 - 包含了多智能体的网络和所需要的操作
-- 用于生成agent模型（value-based算法为q net；AC的为actor net）
+- 用于生成agent模型（value-based算法为q net；AC的为actor net）（不包含mixing net或者critic net）
 - 包含agent的操作，如产生action、计算individual q值等
 
 SMAC()：
@@ -19,7 +19,7 @@ ReplayBuffer()：
 
 Learner：
 - 学习器，充当replaybuffer和mac的粘合剂，即用某种算法使用buffer中的数据训练mac
-- 注意：Leaner包含Mixing net或者Critic Net，因为这两个只是用来辅助我们训练q net或者actor net，训练完成后就丢弃了。只需要q net或者actor net做决策（CTDE范式）
+- 注意：Leaner包含mixing net或者critic Net，因为这两个只是用来辅助我们训练q net或者actor net，训练完成后就丢弃了。只需要q net或者actor net做决策（CTDE范式）
 
 rollout：
 - 主要有两个参数：mac、env
